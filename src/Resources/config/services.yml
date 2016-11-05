@@ -1,0 +1,10 @@
+services:
+    admin_widget.widget.manager:
+        class: Avdb\AdminLteBundle\Widget\WidgetManager
+
+    admin_widget.twig_extension:
+        class: Avdb\AdminLteBundle\Twig\WidgetExtension
+        arguments:
+            - '@admin_widget.widget.manager'
+        tags:
+            - { name: twig.extension }

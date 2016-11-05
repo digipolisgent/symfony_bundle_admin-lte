@@ -1,0 +1,23 @@
+{
+    "name": "avdb/admin-lte-bundle",
+    "authors": [
+        {
+            "name": "Arne Van den Bogaert",
+            "email": "arne.vandenbogaert@outlook.com"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "^3.1|^2.8",
+        "knplabs/knp-menu-bundle": "^2.1"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Avdb\\AdminLteBundle\\": "src"
+        }
+    }
+}
