@@ -1,0 +1,87 @@
+{% extends 'AdminLteBundle::base.html.twig' %}
+
+{% block body_attributes %}class="hold-transition skin-black sidebar-mini"{% endblock %}
+
+{% block body %}
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="{% block logo_uri %}{% endblock %}" class="logo">
+            <span class="logo-mini">
+                {% block logo_mini %}<b>LTE</b>{% endblock %}
+            </span>
+            <span class="logo-lg">
+                {% block logo_big %}Admin<b>LTE</b>{% endblock %}
+            </span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                {% block navbar_top %}
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+                <div class="navbar-custom-menu">
+                    {{ widgets_render('HEADER_WIDGET') }}
+                    {% set sidebar_right = widgets_render('SIDEBAR_WIDGET_RIGHT') %}
+                    {% if sidebar_right %}
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    {% endif %}
+                </div>
+                {% endblock %}
+            </nav>
+        </header>
+
+        <aside class="main-sidebar">
+            {% block sidebar_left %}
+                <section class="sidebar">
+                    {{ widgets_render('SIDEBAR_WIDGET_LEFT') }}
+                </section>
+            {% endblock %}
+        </aside>
+
+        <div class="content-wrapper">
+            {% block content %}
+                {{ widgets_render('CONTENT_WIDGET_TOP') }}
+                <section class="content-header">
+                    {% block content_header %}{% endblock %}
+                </section>
+                <section class="content">
+                    {% block content_body %}{% endblock %}
+                </section>
+            {% endblock %}
+        </div>
+
+        <footer class="main-footer">
+            {% block footer %}
+                <div class="pull-right hidden-xs">
+                    <b>Version</b> 0.0.1
+                </div>
+                <strong>
+                    Copyright &copy; <a href="#"></a>.
+                </strong>
+                All rights reserved.
+            {% endblock %}
+        </footer>
+
+        {% if sidebar_right %}
+            <aside class="control-sidebar control-sidebar-dark">
+                <div class="tab-content">
+                    <div class="tab-pane active">
+                        {{ sidebar_right }}
+                    </div>
+                </div>
+            </aside>
+            <div class="control-sidebar-bg"></div>
+        {% endif %}
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+    <script>$(function(){$('select.select2').select2()});</script>
+{% endblock %}

@@ -1,15 +1,27 @@
 <?php
-
 namespace Avdb\AdminLteBundle\Twig;
 
 use Avdb\AdminLteBundle\Widget\WidgetManager;
 
+/**
+ * Class WidgetExtension
+ *
+ * @package Avdb\AdminLteBundle\Twig
+ */
 class WidgetExtension extends \Twig_Extension
 {
     /**
      * @var WidgetManager
      */
     private $manager;
+
+    /**
+     * @return string
+     */
+    public function getName()
+    {
+        return 'admin_lte_widget_extension';
+    }
 
     /**
      * WidgetExtension constructor.
@@ -27,12 +39,12 @@ class WidgetExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            'd01_widgets_render' => new \Twig_SimpleFunction(
+            'widgets_render' => new \Twig_SimpleFunction(
                 'widgets_render',
                 [$this, 'renderWidgets'],
                 ['is_safe' => ['html']]
             ),
-            'd01_widget_render'  => new \Twig_SimpleFunction(
+            'widget_render'  => new \Twig_SimpleFunction(
                 'widget_render',
                 [$this, 'renderWidget'],
                 ['is_safe' => ['html']]
@@ -46,9 +58,9 @@ class WidgetExtension extends \Twig_Extension
      */
     public function renderWidgets($type)
     {
-        $output = '';
-
-        foreach($this->manager->getForType($type) as $widget) {
+        $output  = '';
+        $widgets = $this->manager->getForType($type);
+        foreach($widgets as $widget) {
             $output .= $widget();
         }
 

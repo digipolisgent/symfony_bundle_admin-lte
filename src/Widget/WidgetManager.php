@@ -1,7 +1,7 @@
 <?php
 namespace Avdb\AdminLteBundle\Widget;
 
-use D01\Bundle\AdminBundle\Exception\WidgetNotFoundException;
+use Avdb\AdminLteBundle\Exception\WidgetNotFoundException;
 use Doctrine\Common\Collections\ArrayCollection;
 
 class WidgetManager
@@ -63,7 +63,7 @@ class WidgetManager
      * @return Widget
      * @throws WidgetNotFoundException
      */
-    public function get($alias) : Widget
+    public function get($alias)
     {
         if(false === $this->has($alias)) {
             throw WidgetNotFoundException::fromAlias($alias);
@@ -80,6 +80,6 @@ class WidgetManager
      */
     public function getForType($type)
     {
-        return $this->types[$type] ?? [];
+        return isset($this->types[$type]) ? $this->types[$type] : [];
     }
 }

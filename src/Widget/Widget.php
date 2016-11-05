@@ -9,6 +9,12 @@ namespace Avdb\AdminLteBundle\Widget;
  */
 interface Widget
 {
+    const TYPE_HEADER           = 'HEADER_WIDGET';
+    const TYPE_SIDEBAR_RIGHT    = 'SIDEBAR_WIDGET_RIGHT';
+    const TYPE_SIDEBAR_LEFT     = 'SIDEBAR_WIDGET_LEFT';
+    const TYPE_CONTENT_TOP      = 'CONTENT_WIDGET_TOP';
+
+
     /**
      * Should return the HTML that the widget is outputting
      *

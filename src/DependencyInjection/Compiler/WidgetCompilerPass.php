@@ -14,7 +14,7 @@ class WidgetCompilerPass implements CompilerPassInterface
         $manager = $container->getDefinition(Configuration::WIDGET_MANAGER);
 
         foreach($container->findTaggedServiceIds(Configuration::TAG_WIDGET) as $id => $config) {
-            $manager->addMethodCall('add', [new Reference($id), $config[0]['priority'] ?: null]);
+            $manager->addMethodCall('add', [new Reference($id), isset($config[0]['priority']) ? $config[0]['priority'] : null]);
         }
     }
 }
