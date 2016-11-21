@@ -5,6 +5,7 @@
 {% block body %}
     <div class="wrapper">
         <header class="main-header">
+            {% block header %}
             <!-- Logo -->
             <a href="{% block logo_uri %}{% endblock %}" class="logo">
             <span class="logo-mini">
@@ -33,6 +34,7 @@
                 </div>
                 {% endblock %}
             </nav>
+            {% endblock %}
         </header>
 
         <aside class="main-sidebar">
