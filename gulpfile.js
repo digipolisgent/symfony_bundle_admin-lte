@@ -20,7 +20,8 @@ paths = {
         './node_modules/admin-lte/plugins/select2/select2.css',
         './node_modules/admin-lte/dist/css/AdminLTE.css',
         './node_modules/admin-lte/dist/css/skins/skin-black.css',
-        './node_modules/admin-lte/plugins/iCheck/square/blue.css'
+        './node_modules/admin-lte/plugins/iCheck/square/blue.css',
+        './node_modules/dropzone/dist/dropzone.css'
     ],
     js: [
         './node_modules/admin-lte/plugins/jQuery/jquery-2.2.3.min.js',
@@ -30,7 +31,8 @@ paths = {
         './node_modules/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js',
         './node_modules/admin-lte/plugins/fastclick/fastclick.js',
         './node_modules/admin-lte/plugins/iCheck/icheck.js',
-        './node_modules/admin-lte/dist/js/app.min.js'
+        './node_modules/admin-lte/dist/js/app.min.js',
+        './node_modules/dropzone/dist/dropzone.js'
     ]
 };
 

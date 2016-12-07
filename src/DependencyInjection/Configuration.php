@@ -8,8 +8,8 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 class Configuration implements ConfigurationInterface
 {
     const ROOT_NODE      = 'avdb_admin_lite';
-    const TAG_WIDGET     = 'admin_widget.widget';
-    const WIDGET_MANAGER = 'admin_widget.widget.manager';
+    const TAG_WIDGET     = 'admin_lte.widget';
+    const WIDGET_MANAGER = 'admin_lte.widget.manager';
 
     public function getConfigTreeBuilder()
     {

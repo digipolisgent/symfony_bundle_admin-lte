@@ -3,6 +3,9 @@
 {% block body_attributes %}class="hold-transition skin-black sidebar-mini"{% endblock %}
 
 {% block body %}
+    {{ widgets_render('HEADER_WIDGET') }}
+    {% set sidebar_right = widgets_render('SIDEBAR_WIDGET_RIGHT') %}
+
     <div class="wrapper">
         <header class="main-header">
             {% block header %}
@@ -24,8 +27,6 @@
                 </a>
 
                 <div class="navbar-custom-menu">
-                    {{ widgets_render('HEADER_WIDGET') }}
-                    {% set sidebar_right = widgets_render('SIDEBAR_WIDGET_RIGHT') %}
                     {% if sidebar_right %}
                         <li>
                             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>

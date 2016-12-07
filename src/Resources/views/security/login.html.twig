@@ -1,0 +1,24 @@
+{% extends 'AdminLteBundle::screen_layout.html.twig' %}
+
+{% block content %}
+    <form action="{{ path(login_route) }}" method="post">
+
+        <div class="form-group has-feedback {% if has_errors %}has-error{% endif %}">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            <input type="text" class="form-control" id="username" name="_username" required="required" placeholder="username" />
+        </div>
+
+        <div class="form-group has-feedback {% if has_errors %}has-error{% endif %}">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            <input type="password" class="form-control" id="password" name="_password" required="required" placeholder="password" />
+        </div>
+
+        {% if has_errors and error %}
+            <p class="text-red">{{ error }}</p>
+        {% endif %}
+
+        <div class="form-group has-feedback {% if has_errors %}has-error{% endif %}">
+            <button class="btn btn-flat btn-primary">Log in</button>
+        </div>
+    </form>
+{% endblock %}

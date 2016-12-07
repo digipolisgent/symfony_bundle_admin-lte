@@ -1,0 +1,13 @@
+{% extends 'AdminLteBundle::base.html.twig' %}
+{% block body_attributes %}class="hold-transition login-page"{% endblock %}
+
+{% block body %}
+    <div class="login-box">
+        <div class="login-logo">
+            {% block logo %}{% endblock %}
+        </div>
+        <div class="login-box-body">
+            {% block content %}...{% endblock %}
+        </div>
+    </div>
+{% endblock %}

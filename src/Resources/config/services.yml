@@ -1,10 +1,18 @@
 services:
-    admin_widget.widget.manager:
+
+    admin_lite.dropzone.twig_extension:
+        class: Avdb\AdminLteBundle\Twig\DropzoneExtension
+        arguments:
+            - '@router'
+        tags:
+            - { name: twig.extension }
+
+    admin_lte.widget.manager:
         class: Avdb\AdminLteBundle\Widget\WidgetManager
 
-    admin_widget.twig_extension:
+    admin_lte.widget.twig_extension:
         class: Avdb\AdminLteBundle\Twig\WidgetExtension
         arguments:
-            - '@admin_widget.widget.manager'
+            - '@admin_lte.widget.manager'
         tags:
             - { name: twig.extension }
