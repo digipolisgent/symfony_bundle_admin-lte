@@ -21,6 +21,7 @@ paths = {
         './node_modules/admin-lte/dist/css/AdminLTE.css',
         './node_modules/admin-lte/dist/css/skins/skin-black.css',
         './node_modules/admin-lte/plugins/iCheck/square/blue.css',
+        './node_modules/admin-lte/plugins/datepicker/datepicker3.css',
         './node_modules/dropzone/dist/dropzone.css'
     ],
     js: [
