@@ -26,9 +26,9 @@
 <script src="{{ asset('bundles/adminlte/js/admin-lte.min.js') }}"></script>
 <script>
     $(function () {
-        $('input').iCheck(AdminLTE.options.iCheck);
-        $('select').select2(AdminLTE.options.select2);
-        $('input.datepicker').datepicker(AdminLTE.options.datepicker);
+        $('input[type="checkbox"]').iCheck(AdminLTE.options.iCheck);
+        $('select.select2, select[select2]').select2(AdminLTE.options.select2);
+        $('input[datepicker], input.datepicker').datepicker(AdminLTE.options.datepicker);
     });
 </script>
 {% block javascripts %}
