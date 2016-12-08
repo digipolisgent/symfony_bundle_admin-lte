@@ -3,7 +3,8 @@ var AdminLTE = {
 
         datepicker: {
             'autoclose': true,
-            'todayHighlight': true
+            'todayHighlight': true,
+            'format': 'dd/mm/yyyy'
         },
 
         iCheck: {
