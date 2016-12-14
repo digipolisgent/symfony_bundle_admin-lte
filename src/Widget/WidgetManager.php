@@ -36,7 +36,7 @@ class WidgetManager
 
         $this->widgets->set($widget->getAlias(), $widget);
 
-        if($priority !== null) {
+        if($priority === null) {
             $this->types[$widget->getType()][] = $widget;
         }else{
             $this->types[$widget->getType()][$priority] = $widget;

@@ -1,0 +1,13 @@
+<div class="col-lg-{{ width }} col-xs-{{ width * 2 }}">
+    <div class="small-box bg-{{ color }}">
+        <div class="inner">
+            <h3>{{ title|raw }}</h3>
+
+            <p>{{ text|capitalize }}</p>
+        </div>
+        <div class="icon">
+            <i class="ion ion-{{ icon }}"></i>
+        </div>
+        <a href="{{ link_uri }}" class="small-box-footer">{{ link_label|capitalize }} <i class="fa fa-arrow-circle-right"></i></a>
+    </div>
+</div>

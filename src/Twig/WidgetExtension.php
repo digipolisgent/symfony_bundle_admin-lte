@@ -1,6 +1,8 @@
 <?php
 namespace Avdb\AdminLteBundle\Twig;
 
+use Avdb\AdminLteBundle\Component\Templating\TemplateReference;
+use Avdb\AdminLteBundle\Widget\Widget;
 use Avdb\AdminLteBundle\Widget\WidgetManager;
 
 /**
@@ -42,39 +44,60 @@ class WidgetExtension extends \Twig_Extension
             'widgets_render' => new \Twig_SimpleFunction(
                 'widgets_render',
                 [$this, 'renderWidgets'],
-                ['is_safe' => ['html']]
+                ['is_safe' => ['html'], 'needs_environment' => true]
             ),
             'widget_render'  => new \Twig_SimpleFunction(
                 'widget_render',
                 [$this, 'renderWidget'],
-                ['is_safe' => ['html']]
+                ['is_safe' => ['html'], 'needs_environment' => true]
             ),
         ];
     }
 
     /**
+     * @param \Twig_Environment $twig
      * @param $type
      * @return string
      */
-    public function renderWidgets($type)
+    public function renderWidgets(\Twig_Environment $twig, $type)
     {
         $output  = '';
         $widgets = $this->manager->getForType($type);
+
         foreach($widgets as $widget) {
-            $output .= $widget();
+            $output .= $this->render($twig, $widget, []);
         }
 
         return $output;
     }
 
     /**
+     * @param \Twig_Environment $twig
      * @param $alias
      * @param array $options
+     *
+     * @return string
+     * @throws \Avdb\AdminLteBundle\Exception\WidgetNotFoundException
+     */
+    public function renderWidget(\Twig_Environment $twig, $alias, array $options = [])
+    {
+        return $this->render($twig, $this->manager->get($alias), $options);
+    }
+
+    /**
+     * @param \Twig_Environment $twig
+     * @param Widget $widget
+     * @param $options
      * @return string
      */
-    public function renderWidget($alias, array $options = [])
+    private function render(\Twig_Environment $twig, Widget $widget, $options)
     {
-        $widget = $this->manager->get($alias);
-        return $widget($options);
+        $response = $widget($options);
+
+        if ($response instanceof TemplateReference) {
+            return (string)$twig->render($response->getTemplate(), $response->getVariables());
+        }
+
+        return (string)$response;
     }
 }

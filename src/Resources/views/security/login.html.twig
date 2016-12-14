@@ -5,12 +5,12 @@
 
         <div class="form-group has-feedback {% if has_errors %}has-error{% endif %}">
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            <input type="text" class="form-control" id="username" name="_username" required="required" placeholder="username" />
+            <input type="text" class="form-control" id="username" name="_username" required="required" placeholder="{{ 'username'|trans }}" />
         </div>
 
         <div class="form-group has-feedback {% if has_errors %}has-error{% endif %}">
             <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            <input type="password" class="form-control" id="password" name="_password" required="required" placeholder="password" />
+            <input type="password" class="form-control" id="password" name="_password" required="required" placeholder="{{ 'password'|trans }}" />
         </div>
 
         {% if has_errors and error %}
@@ -18,7 +18,7 @@
         {% endif %}
 
         <div class="form-group has-feedback {% if has_errors %}has-error{% endif %}">
-            <button class="btn btn-flat btn-primary">Log in</button>
+            <button class="btn btn-flat btn-primary">{{ 'login'|trans|capitalize }}</button>
         </div>
     </form>
 {% endblock %}
