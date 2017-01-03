@@ -13,6 +13,8 @@
             <input type="password" class="form-control" id="password" name="_password" required="required" placeholder="{{ 'password'|trans }}" />
         </div>
 
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
         {% if has_errors and error %}
             <p class="text-red">{{ error }}</p>
         {% endif %}
