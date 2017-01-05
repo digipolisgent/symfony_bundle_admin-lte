@@ -1,3 +1,7 @@
 .small-box > .inner  > h3 > sup {
     font-size:20px;
 }
+
+.checkbox > label {
+    padding-left: 0;
+}
