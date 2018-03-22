@@ -43,10 +43,11 @@ class DropzoneExtension extends \Twig_Extension
      * @param array $params
      * @return string
      */
-    public function dropzone(\Twig_Environment $twig, $route, array $params = array())
+    public function dropzone(\Twig_Environment $twig, $route, array $params = array(), array $options = array())
     {
-        return $twig->render('AdminLteBundle:partials:dropzone.html.twig', [
-            'uri' => $this->router->generate($route, $params)
+        return $twig->render('@AdminLte/partials/dropzone.html.twig', [
+            'uri' => $this->router->generate($route, $params),
+            'options' => ['multiple' => true ] + $options
         ]);
     }
 }

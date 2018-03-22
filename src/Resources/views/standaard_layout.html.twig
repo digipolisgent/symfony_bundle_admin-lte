@@ -27,11 +27,7 @@
                 </a>
 
                 <div class="navbar-custom-menu">
-                    {% if sidebar_right %}
-                        <li>
-                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                        </li>
-                    {% endif %}
+                    {% block sidebar_right %}{% endblock %}
                 </div>
                 {% endblock %}
             </nav>

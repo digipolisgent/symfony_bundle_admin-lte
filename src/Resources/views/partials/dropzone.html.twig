@@ -1,5 +1,5 @@
 <form action="{{ uri }}" class="dropzone">
     <div class="fallback">
-        <input name="file" type="file" multiple />
+        <input name="file" type="file" {% if options.multiple %}multiple{% endif %} />
     </div>
 </form>
