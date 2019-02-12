@@ -1,14 +1,14 @@
 <?php
-namespace Avdb\AdminLteBundle\Twig;
+namespace DigipolisGent\AdminLteBundle\Twig;
 
-use Avdb\AdminLteBundle\Component\Templating\TemplateReference;
-use Avdb\AdminLteBundle\Widget\Widget;
-use Avdb\AdminLteBundle\Widget\WidgetManager;
+use DigipolisGent\AdminLteBundle\Component\Templating\TemplateReference;
+use DigipolisGent\AdminLteBundle\Widget\Widget;
+use DigipolisGent\AdminLteBundle\Widget\WidgetManager;
 
 /**
  * Class WidgetExtension
  *
- * @package Avdb\AdminLteBundle\Twig
+ * @package DigipolisGent\AdminLteBundle\Twig
  */
 class WidgetExtension extends \Twig_Extension
 {
@@ -77,7 +77,7 @@ class WidgetExtension extends \Twig_Extension
      * @param array $options
      *
      * @return string
-     * @throws \Avdb\AdminLteBundle\Exception\WidgetNotFoundException
+     * @throws \DigipolisGent\AdminLteBundle\Exception\WidgetNotFoundException
      */
     public function renderWidget(\Twig_Environment $twig, $alias, array $options = [])
     {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Avdb\AdminLteBundle;
+namespace DigipolisGent\AdminLteBundle;
 
-use Avdb\AdminLteBundle\DependencyInjection\Compiler\WidgetCompilerPass;
+use DigipolisGent\AdminLteBundle\DependencyInjection\Compiler\WidgetCompilerPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
