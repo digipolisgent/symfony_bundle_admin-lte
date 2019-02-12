@@ -1,17 +1,17 @@
 services:
 
     admin_lite.dropzone.twig_extension:
-        class: Avdb\AdminLteBundle\Twig\DropzoneExtension
+        class: DigipolisGent\AdminLteBundle\Twig\DropzoneExtension
         arguments:
             - '@router'
         tags:
             - { name: twig.extension }
 
     admin_lte.widget.manager:
-        class: Avdb\AdminLteBundle\Widget\WidgetManager
+        class: DigipolisGent\AdminLteBundle\Widget\WidgetManager
 
     admin_lte.widget.twig_extension:
-        class: Avdb\AdminLteBundle\Twig\WidgetExtension
+        class: DigipolisGent\AdminLteBundle\Twig\WidgetExtension
         arguments:
             - '@admin_lte.widget.manager'
         tags:

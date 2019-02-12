@@ -1,10 +1,10 @@
 <?php
-namespace Avdb\AdminLteBundle\Component\Templating;
+namespace DigipolisGent\AdminLteBundle\Component\Templating;
 
 /**
  * Class TemplateReference
  *
- * @package Avdb\AdminLteBundle\Component\Templating
+ * @package DigipolisGent\AdminLteBundle\Component\Templating
  */
 class TemplateReference
 {

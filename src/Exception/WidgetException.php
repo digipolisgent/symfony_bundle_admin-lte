@@ -1,6 +1,6 @@
 <?php
 
-namespace Avdb\AdminLteBundle\Exception;
+namespace DigipolisGent\AdminLteBundle\Exception;
 
 class WidgetException extends \Exception
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Avdb\AdminLteBundle\Widget;
+namespace DigipolisGent\AdminLteBundle\Widget;
 
 /**
  * Interface Widget
  *
- * @package Avdb\AdminLteBundle\Widget
+ * @package DigipolisGent\AdminLteBundle\Widget
  */
 interface Widget
 {

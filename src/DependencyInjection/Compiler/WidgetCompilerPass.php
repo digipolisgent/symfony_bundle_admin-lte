@@ -1,10 +1,10 @@
 <?php
 
-namespace Avdb\AdminLteBundle\DependencyInjection\Compiler;
+namespace DigipolisGent\AdminLteBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Avdb\AdminLteBundle\DependencyInjection\Configuration;
+use DigipolisGent\AdminLteBundle\DependencyInjection\Configuration;
 use Symfony\Component\DependencyInjection\Reference;
 
 class WidgetCompilerPass implements CompilerPassInterface

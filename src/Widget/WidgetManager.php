@@ -1,7 +1,7 @@
 <?php
-namespace Avdb\AdminLteBundle\Widget;
+namespace DigipolisGent\AdminLteBundle\Widget;
 
-use Avdb\AdminLteBundle\Exception\WidgetNotFoundException;
+use DigipolisGent\AdminLteBundle\Exception\WidgetNotFoundException;
 use Doctrine\Common\Collections\ArrayCollection;
 
 class WidgetManager

@@ -1,14 +1,14 @@
 <?php
-namespace Avdb\AdminLteBundle\Widget;
+namespace DigipolisGent\AdminLteBundle\Widget;
 
-use Avdb\AdminLteBundle\Component\Templating\TemplateReference;
-use Avdb\AdminLteBundle\Domain\Color;
+use DigipolisGent\AdminLteBundle\Component\Templating\TemplateReference;
+use DigipolisGent\AdminLteBundle\Domain\Color;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Class BoxWidget
  *
- * @package Avdb\AdminLteBundle\Widget
+ * @package DigipolisGent\AdminLteBundle\Widget
  */
 class BoxWidget implements Widget
 {

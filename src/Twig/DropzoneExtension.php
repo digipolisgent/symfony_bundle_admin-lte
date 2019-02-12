@@ -1,6 +1,6 @@
 <?php
 
-namespace Avdb\AdminLteBundle\Twig;
+namespace DigipolisGent\AdminLteBundle\Twig;
 
 use Symfony\Component\Routing\RouterInterface;
 

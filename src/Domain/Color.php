@@ -1,6 +1,6 @@
 <?php
 
-namespace Avdb\AdminLteBundle\Domain;
+namespace DigipolisGent\AdminLteBundle\Domain;
 
 interface Color
 {
